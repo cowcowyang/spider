@@ -19,3 +19,5 @@ class JobboleArticleItem(scrapy.Item):
     article_tags = scrapy.Field()
     vote_num = scrapy.Field()
     cover_url = scrapy.Field()
+    cover_local_path = scrapy.Field()
+    url_id = scrapy.Field()
