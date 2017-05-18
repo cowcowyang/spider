@@ -65,9 +65,10 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'ArticleSpider.pipelines.JsonExpoterPipline': 2,
+    #'ArticleSpider.pipelines.JsonExpoterPipline': 2,
    # 'scrapy.pipelines.images.ImagesPipeline': 1
-    'ArticleSpider.pipelines.ArticleImagesPipline': 1
+    #'ArticleSpider.pipelines.ArticleImagesPipline': 1
+    'ArticleSpider.pipelines.MysqlTwistedPipline':1
 }
 project_dir = os.path.abspath(os.path.dirname(__file__))
 IMAGES_URLS_FIELD = 'cover_url'
@@ -93,3 +94,11 @@ IMAGES_STORE = os.path.join(project_dir,"images")
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+# DB settings
+MYSQL_HOST = "localhost"
+MYSQL_DBNAME = "article_spider"
+MYSQL_USER = "root"
+MYSQL_PASSWORD = "swbl3721"
+
